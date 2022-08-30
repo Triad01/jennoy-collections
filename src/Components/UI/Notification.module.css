@@ -1,0 +1,48 @@
+.notification {
+  width: 50%;
+  height: 5rem;
+  background-color: #1a8ed1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 5%;
+  align-items: center;
+  color: white;
+  position: fixed;
+  border-radius: 1rem;
+  left: 25%;
+  z-index: 9999;
+}
+
+.notification h2,
+.notification p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.error {
+  background-color: #690000;
+}
+
+.success {
+  background-color: #1ad1b9;
+}
+
+.close {
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  font-size: 4em;
+  color: grey;
+  font-weight: 100;
+  cursor: pointer;
+  background-color: transparent;
+  transform: translate(50%, -50%);
+}
+
+@media (max-width: 576px) {
+  .notification {
+    width: 95%;
+    left: 2%;
+    font-size: 0.5rem;
+  }
+}

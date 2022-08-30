@@ -1,0 +1,80 @@
+.baglist {
+  background-color: grey;
+  width: 85%;
+  height: 45rem;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  padding-bottom: 2rem;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.baglist-image {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.baglist-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.baglist-container {
+  /* background-color: blue; */
+  height: 100%;
+  color: #fff;
+  padding: 1rem;
+}
+
+.baglist-name {
+  font-size: 2.5rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.baglist-price {
+  font-size: 3rem;
+}
+.baglist-description {
+  color: #000;
+  font-size: 1.5rem;
+  min-height: 3rem;
+}
+
+.baglist-button {
+  margin-top: 1rem;
+}
+@media (min-width: 626px) {
+  .baglist {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .baglist-image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .baglist-price {
+    padding: 3rem;
+  }
+  .baglist-container {
+    width: 50%;
+    text-align: center;
+    padding: 10rem;
+    font-size: 3rem;
+  }
+  .baglist-description {
+    min-height: 5rem;
+    font-size: 2rem;
+  }
+  .baglist-container .itemForm-wrapper {
+    transform: translateX(10rem);
+  }
+}
