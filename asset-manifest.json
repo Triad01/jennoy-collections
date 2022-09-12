@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/jennoy-collections/static/css/main.1c6a92e9.css",
-    "main.js": "/jennoy-collections/static/js/main.b30f6c25.js",
-    "static/media/featured-img-1.jpg": "/jennoy-collections/static/media/featured-img-1.0b2a0d10c20048e7b04e.jpg",
-    "static/media/featured-img-2.jpg": "/jennoy-collections/static/media/featured-img-2.6d5649f367396ed78b23.jpg",
-    "static/media/featured-img-5.jpg": "/jennoy-collections/static/media/featured-img-5.e38b637aefa67b653ec2.jpg",
-    "static/media/featured-img-4.jpg": "/jennoy-collections/static/media/featured-img-4.d56987c6ecd3e3dd0877.jpg",
-    "static/media/jen-1.jpg": "/jennoy-collections/static/media/jen-1.0dc71fff9af5ec3abb38.jpg",
-    "index.html": "/jennoy-collections/index.html",
-    "main.1c6a92e9.css.map": "/jennoy-collections/static/css/main.1c6a92e9.css.map",
-    "main.b30f6c25.js.map": "/jennoy-collections/static/js/main.b30f6c25.js.map"
+    "main.css": "/home/static/css/main.8bda7cd3.css",
+    "main.js": "/home/static/js/main.32ea0b30.js",
+    "static/media/featured-img-1.jpg": "/home/static/media/featured-img-1.0b2a0d10c20048e7b04e.jpg",
+    "static/media/featured-img-2.jpg": "/home/static/media/featured-img-2.6d5649f367396ed78b23.jpg",
+    "static/media/featured-img-5.jpg": "/home/static/media/featured-img-5.e38b637aefa67b653ec2.jpg",
+    "static/media/featured-img-4.jpg": "/home/static/media/featured-img-4.d56987c6ecd3e3dd0877.jpg",
+    "static/media/jen-1.jpg": "/home/static/media/jen-1.0dc71fff9af5ec3abb38.jpg",
+    "index.html": "/home/index.html",
+    "main.8bda7cd3.css.map": "/home/static/css/main.8bda7cd3.css.map",
+    "main.32ea0b30.js.map": "/home/static/js/main.32ea0b30.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c6a92e9.css",
-    "static/js/main.b30f6c25.js"
+    "static/css/main.8bda7cd3.css",
+    "static/js/main.32ea0b30.js"
   ]
 }
