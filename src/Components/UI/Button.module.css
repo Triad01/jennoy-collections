@@ -1,10 +1,13 @@
 .button {
+  width: 10rem;
+  border-radius: 1rem;
+  background-color: teal;
   padding: 1rem;
   border: none;
   text-align: center;
   text-transform: uppercase;
+  color: white;
   font-weight: bold;
-  background-color: pink;
   cursor: pointer;
   transition: all 0.5s;
   margin-right: 68%;

@@ -1,14 +1,14 @@
 import { cartActions } from "./cart-slice";
 import { uiActions } from "./ui-slice";
-import { allBagsAction } from "./allbags-slice";
+import { featuredProductsAction } from "./featured-products-slice";
 
 // FUNTION TO LOAD INITIAL BAGS(in HOME PAGE) FROMS THE BACKEND(COME BACK LATER FOR THIS)==========================================
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const fetchInitialBagsData = () => {
+export const fetchFeaturedProductsData = () => {
   return async (dispatch) => {
-    const fetchBags = async () => {
+    const fetchFeaturedProducts = async () => {
       const response = await fetch(
-        "https://jennoy-collections-default-rtdb.firebaseio.com/tote-bags.json"
+        "https://jennoy-collections-default-rtdb.firebaseio.com/featured-products.json"
       );
 
       if (!response.ok) {
@@ -16,31 +16,26 @@ export const fetchInitialBagsData = () => {
       }
       const responseData = await response.json();
 
-      let loadedBags = [];
+      let loadedFeaturedProducts = [];
       for (const key in responseData) {
-        loadedBags.push({
+        loadedFeaturedProducts.push({
           id: key,
           name: responseData[key].name,
           price: responseData[key].price,
-          description: responseData[key].description,
-          image: responseData[key].image,
         });
       }
 
-      return loadedBags;
+      return loadedFeaturedProducts;
     };
     try {
-      const bagCollection = await fetchBags();
+      const featuredProducts = await fetchFeaturedProducts();
       dispatch(
-        allBagsAction.loadAllBags({
-          name: bagCollection.name,
-          id: bagCollection.id,
-          price: bagCollection.price,
-          description: bagCollection.description,
-          image: bagCollection.image,
+        featuredProductsAction.loadAllFeaturedProducts({
+          name: featuredProducts.name,
+          id: featuredProducts.id,
+          price: featuredProducts.price,
         })
       );
-
       dispatch(
         uiActions.showNotification({
           status: "Success",

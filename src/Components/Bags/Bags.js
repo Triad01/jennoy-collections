@@ -1,6 +1,5 @@
 import React from "react";
 import AvailableBags from "./AvailableBags";
-
 const Bags = () => {
   return (
     <div>

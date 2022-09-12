@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { notification: null };
+const initialState = { notification: null, showModal: false };
 const uiSlice = createSlice({
   name: "error",
   initialState,
@@ -14,6 +14,9 @@ const uiSlice = createSlice({
     },
     closeNotification(state) {
       state.notification = null;
+    },
+    showModal(state) {
+      state.showModal = !state.showModal;
     },
   },
 });

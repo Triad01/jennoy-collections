@@ -1,0 +1,11 @@
+.featured-bag__list {
+  margin-bottom: 10rem;
+}
+
+@media (min-width: 35em) {
+  .featured-bag__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}

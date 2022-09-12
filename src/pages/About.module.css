@@ -1,0 +1,119 @@
+body {
+  background-color: #f4f4f4;
+}
+
+.header {
+  margin: 1rem;
+  margin-top: 10rem;
+  height: 60vh;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header h1 {
+  padding: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, red, blue);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.header p {
+  width: 70%;
+  color: black;
+  font-size: 2rem;
+  text-align: start;
+  padding: 3rem;
+  transform: translateY(-6rem);
+}
+
+.header__upper {
+  height: 37vh;
+  background-color: grey;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.header__lower {
+  padding-top: 6rem;
+  padding-left: 1rem;
+  height: 25vh;
+  background-color: yellow;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+  position: relative;
+  top: -8rem;
+  color: black;
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.service p {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.service__items {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.service__items li {
+  list-style: none;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.service__items .icon {
+  margin-right: 1rem;
+  color: grey;
+}
+
+.service__advantages {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.service__advantages div {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 3rem;
+  padding: 2rem;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem black;
+}
+
+@media (min-width: 35em) {
+  .header {
+    height: 80vh;
+  }
+
+  .header__upper {
+    height: 50vh;
+  }
+  .header__lower {
+    height: 40vh;
+    top: -8rem;
+  }
+  .container {
+    display: flex;
+  }
+  .service__wrap {
+    width: 50%;
+    padding: 5rem;
+    margin: auto;
+  }
+  .service__items {
+    width: 50%;
+    padding: 20rem;
+  }
+  .service__advantages {
+    width: 50%;
+    margin: auto;
+  }
+}

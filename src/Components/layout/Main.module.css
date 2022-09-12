@@ -1,0 +1,152 @@
+.main {
+  height: 100%;
+  overflow: hidden;
+  /* position: relative; */
+  /* z-index: -1; */
+}
+
+main h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+img {
+  width: 25rem;
+  height: 25rem;
+}
+
+.circle__1,
+.circle__2,
+.circle__3,
+.circle__4,
+.circle__5,
+.circle__6 {
+  width: 7rem;
+  height: 7rem;
+  background-color: blue;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.circle__2 {
+  top: 31.5rem;
+}
+
+.circle__3 {
+  top: 63rem;
+}
+.circle__4 {
+  top: 95rem;
+}
+.circle__5 {
+  top: 127rem;
+}
+.circle__6 {
+  top: 158rem;
+}
+.featured-products a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  border: 1px solid red;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.collection {
+  margin: 2rem;
+  height: 50rem;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.collection .btn {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 1rem 2rem;
+  width: 12rem;
+  height: 8rem;
+  text-align: center;
+  background-color: teal;
+  border: 1px solid white;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (min-width: 35em) {
+  .featured-products {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem;
+  }
+  .main h2 {
+    margin-top: 5rem;
+    font-size: 3rem;
+  }
+  img {
+    margin: 5rem;
+    margin-top: 2rem;
+  }
+  .circle__1 {
+    top: 7rem;
+    left: 40rem;
+  }
+  .circle__2 {
+    top: 7rem;
+    left: 77rem;
+  }
+  .circle__3 {
+    top: 7rem;
+    left: 114rem;
+  }
+  .circle__4 {
+    top: 45rem;
+    left: 39rem;
+  }
+  .circle__5 {
+    top: 45rem;
+    left: 77rem;
+  }
+  .circle__6 {
+    top: 45rem;
+    left: 114rem;
+  }
+
+  .collection {
+    justify-content: center;
+    align-content: center;
+    margin: 5rem;
+    margin-top: 3rem;
+  }
+  .collection .btn {
+    margin: 5rem;
+    cursor: pointer;
+  }
+}

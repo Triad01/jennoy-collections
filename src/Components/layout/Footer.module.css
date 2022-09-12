@@ -1,0 +1,93 @@
+.footer {
+  width: 100%;
+  background-color: grey;
+  color: black;
+  padding: 2rem;
+}
+
+.footer__logo {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 3rem;
+}
+
+.footer__list {
+  border-right: 1px solid white;
+  margin-right: 50%;
+}
+.footer__list li {
+  display: block;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: start;
+}
+
+.footer__list a {
+  text-decoration: none;
+  color: black;
+  /* font-weight: bold; */
+  cursor: pointer;
+}
+
+.footer__list a:hover,
+a:active {
+  color: white;
+  border-bottom: 1px solid black;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  width: 80%;
+  margin: 2rem auto;
+  padding-top: 2rem;
+  border-top: 1px solid black;
+}
+
+.footer__copyright a {
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.footer__media-icons {
+  color: black;
+  text-align: center;
+  margin: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+.footer__media-icons a {
+  text-decoration: none;
+  color: black;
+}
+.footer__media-icons .whatsapp,
+.instagram,
+.twitter {
+  font-size: 3rem;
+}
+
+.footer__media-icons > *:hover,
+a:active {
+  color: teal;
+  cursor: pointer;
+}
+
+@media (min-width: 35em) {
+  .footer {
+    padding: 10rem 15rem;
+    font-size: 2rem;
+  }
+  .footer__logo {
+    margin-bottom: 5rem;
+  }
+
+  .footer__media-icons {
+    margin: 5rem;
+  }
+  .footer__copyright {
+    margin: 5rem 10rem;
+  }
+}

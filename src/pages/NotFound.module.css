@@ -1,0 +1,11 @@
+.not-found {
+  margin: 10rem;
+  font-size: 10rem;
+  color: black;
+}
+
+@media (min-width: 576px) {
+  .not-found {
+    color: black;
+  }
+}

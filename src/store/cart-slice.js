@@ -18,7 +18,7 @@ const cartSlice = createSlice({
     },
     addItemToCart(state, action) {
       const newItem = action.payload;
-      state.totalQuantity++;
+      state.totalQuantity = state.totalQuantity + action.payload.quantity;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.totalAmount =
         state.totalAmount + action.payload.price * action.payload.quantity;
@@ -29,11 +29,11 @@ const cartSlice = createSlice({
           name: newItem.name,
           price: newItem.price,
           id: newItem.id,
-          quantity: 1,
+          quantity: newItem.quantity,
           totalPrice: newItem.total,
         });
       } else {
-        existingItem.quantity++;
+        existingItem.quantity = existingItem.quantity + newItem.quantity;
         existingItem.totalPrice = existingItem.totalPrice + newItem.price;
       }
     },

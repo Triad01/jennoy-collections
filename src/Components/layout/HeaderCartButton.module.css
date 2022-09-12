@@ -1,12 +1,13 @@
 .button {
-  width: 20rem;
+  width: 10rem;
   height: 5rem;
   border: 0px;
   font-size: 2rem;
   cursor: pointer;
   border-radius: 2rem;
-  margin-right: 1rem;
+  margin-right: 10rem;
   margin-top: 1rem;
+  box-sizing: border-box;
 }
 .bump {
   animation: bump 300ms ease-out;

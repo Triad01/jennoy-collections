@@ -1,9 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
 import BagListItems from "./BagListItem";
 import styles from "./AvailableBags.module.css";
 import Card from "../UI/Card/Card";
-import { fetchInitialBagsData } from "../../store/cart-actions";
+
+// import { fetchInitialBagsData } from "../../store/cart-actions";
 
 // const DummyBagCollection = [
 //   {
@@ -22,7 +23,7 @@ import { fetchInitialBagsData } from "../../store/cart-actions";
 //     name: "Canadian swiss",
 //     price: 2000,
 //     description: "good quality bag",
-//     id: "3",
+//     id: "m3",
 //   },
 //   {
 //     name: "Canadian swiss",
@@ -45,51 +46,51 @@ import { fetchInitialBagsData } from "../../store/cart-actions";
 // ];
 
 const AvailableBags = () => {
-  const loadedBags = useSelector((state) => state.allBags.loadedBags);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchInitialBagsData());
-  }, [dispatch]);
-
-  // ASYCN FETCHING OF DATA FROM BACKEND=============================
-  // const [error, setError] = useState(null);
-  // const [loadedAvailableBags, setLoadedAvailableBags] = useState([]);
-  // const [bagIsLoading, setBagIsLoading] = useState(false);
+  // const loadedBags = useSelector((state) => state.allBags);
+  // const dispatch = useDispatch();
   // useEffect(() => {
-  //   setBagIsLoading(true);
-  //   const fetchBags = async () => {
-  //     const response = await fetch(
-  //       "https://jennoy-collections-default-rtdb.firebaseio.com/tote-bags.json"
-  //     );
-  //     if (!response.ok) {
-  //       throw new Error(
-  //         "Something went wrong... Pls check your internet connection"
-  //       );
-  //     }
+  //   dispatch(fetchInitialBagsData());
+  // }, [dispatch]);
 
-  //     const responseData = await response.json();
+  // ASYCN FETCHING OF DATA FROM BACKEND===================================================================
+  const [error, setError] = useState(null);
+  const [loadedAvailableBags, setLoadedAvailableBags] = useState([]);
+  const [bagIsLoading, setBagIsLoading] = useState(false);
+  useEffect(() => {
+    setBagIsLoading(true);
+    const fetchBags = async () => {
+      const response = await fetch(
+        "https://jennoy-collections-default-rtdb.firebaseio.com/tote-bags.json"
+      );
+      if (!response.ok) {
+        throw new Error(
+          "Something went wrong... Pls check your internet connection"
+        );
+      }
 
-  //     let loadedBags = [];
-  //     for (const key in responseData) {
-  //       loadedBags.push({
-  //         id: key,
-  //         name: responseData[key].name,
-  //         price: responseData[key].price,
-  //         description: responseData[key].description,
-  //         image: responseData[key].image,
-  //       });
-  //     }
-  //     setLoadedAvailableBags(loadedBags);
-  //     setBagIsLoading(false);
-  //   };
+      const responseData = await response.json();
 
-  //   fetchBags().catch((error) => {
-  //     setError(error.message);
-  //     setBagIsLoading(false);
-  //   });
-  // }, []);
+      let loadedBags = [];
+      for (const key in responseData) {
+        loadedBags.push({
+          id: key,
+          name: responseData[key].name,
+          price: responseData[key].price,
+          description: responseData[key].description,
+          image: responseData[key].image,
+        });
+      }
+      setLoadedAvailableBags(loadedBags);
+      setBagIsLoading(false);
+    };
 
-  const content = loadedBags.map((BagItem) => {
+    fetchBags().catch((error) => {
+      setError(error.message);
+      setBagIsLoading(false);
+    });
+  }, []);
+
+  const content = loadedAvailableBags.map((BagItem) => {
     return (
       <BagListItems
         id={BagItem.id}
@@ -102,25 +103,25 @@ const AvailableBags = () => {
     );
   });
 
-  // if (bagIsLoading && !error) {
-  //   return (
-  //     <section className={styles.isLoading}>
-  //       <p>loading bag collections...please wait!</p>
-  //     </section>
-  //   );
-  // }
+  if (bagIsLoading && !error) {
+    return (
+      <section className={styles.isLoading}>
+        <p>loading bag collections...please wait!</p>
+      </section>
+    );
+  }
 
-  // if (error && !bagIsLoading) {
-  //   return (
-  //     <secton>
-  //       <p className={styles["error-text"]}>
-  //         {error}.
-  //         <br />
-  //         Pls check your internet connection.
-  //       </p>
-  //     </secton>
-  //   );
-  // }
+  if (error && !bagIsLoading) {
+    return (
+      <secton>
+        <p className={styles["error-text"]}>
+          {error}.
+          <br />
+          Pls check your internet connection.
+        </p>
+      </secton>
+    );
+  }
   return (
     <section>
       <Card className={styles["all-bags"]}>
